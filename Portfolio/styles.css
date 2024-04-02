@@ -1,0 +1,175 @@
+:root {
+  --main-violet1: #100710;/*pasara a ser un tono de morado #100710*/
+  /*el anterior deberia ser el color mas oscuro*/
+  --main-violet2: #C21292;
+  --main-blue: #6A4CB5;
+  --main-lile:#C59AF8;
+  --main-yellow: #FFA732;/*buscar un color que haga contraste sobre main-orange*/
+  --main-white:#E8E9FF;/*#E8E8ff para letras claras en fondos oscuros*/;
+}
+@font-face {
+  font-family: 'Rubik Broken Fax';
+  src: url('/RubikBrokenFax-Regular.ttf');
+}
+
+body{
+  width:100%;
+  margin:0;
+  font-weight: 400;
+  line-height: 1.4;
+}
+#head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  background-color: var(--main-violet1);
+  z-index:1000;
+  font-family: 'Rubik Broken Fax';
+  color:var(--main-white);
+}
+#header-img{
+  height: 150%;
+  margin-left: 3%;
+  /*aqui estaria bueno colocarle sombreado blanco*/
+}
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+}
+
+.nav-list li {
+  display: inline-block;
+  margin-right: 10px;
+  
+}
+.btn{
+  text-decoration:none;
+  color:var(--main-white);
+}
+#welcome-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, var(--main-violet2) 0%, #181719 100%);
+}
+#hi{
+   margin-top: 50px;
+    display: flex;
+    justify-content:center;
+    font-family: 'Rubik Broken Fax'
+}
+#reliable,#heres,#some-projects-view, #heres{
+    display: flex;
+    justify-content:center;
+}
+#heres{
+  
+  font-family: 'Rubik Broken Fax'
+}
+#some-projects-view{
+   margin: 0px;
+   padding-top:8%;
+   font-family: 'Rubik Broken Fax';
+}
+
+#projects, #welcome-section, #lets-work-together {
+  width: 100%;
+  padding-top: 5%;
+}
+#reliable,#coffee{
+color:var(--main-white);
+}
+#projects{
+  background-color:var(--main-blue);/*cambiar por un tono de morado*/
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /*podria crear un gradiente linear para combinar colores entre sections*/
+  background-image: linear-gradient(62deg, var(--main-blue) 0%, #181719 100%);
+}
+.projects-grid{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  text-align: center;
+  width:100%;
+}
+.project-tile{
+margin:1% 8%;
+background-color: var(--main-yellow);
+box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+border-radius: 2px;
+}
+.link-img{
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+.corc{
+  display:none;
+  color:white;
+  transition: color 0.3s ease-out;
+  margin:0;
+  padding:0;
+}
+.project-tile:hover .corc {
+  display: block;
+}
+.btn-show-all {
+  font-size: 2rem;
+  background: var(--main-lile);
+  display: flex;
+  justify-content:center;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  width:15%;
+  height:7%;
+  color:white;
+  font-family: 'Rubik Broken Fax';
+}
+#lets-work-together{
+  background-color:var(--main-yellow);
+}
+#lwt h2, #lwt h3{
+  display: flex;
+  justify-content:center;
+}
+#lwt h2{
+  font-family: 'Rubik Broken Fax';
+}
+.nav-list2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family:'Rubik Broken Fax';
+}
+
+.nav-list2 li {
+  display: inline-block;
+  margin-right: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+      --main-violet: #562D88;
+      --main-pink: #8E0E6A;
+      --main-orange: #B03030;
+      --main-gray: #1E252B;
+      --main-yellow: #CC8400;
+  }
+}
