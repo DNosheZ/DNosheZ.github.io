@@ -1,24 +1,31 @@
 :root {
-  --main-violet1: #100710;/*pasara a ser un tono de morado #100710*/
-  /*el anterior deberia ser el color mas oscuro*/
+  --main-black: #100710;
   --main-violet2: #C21292;
   --main-blue: #6A4CB5;
   --main-lile:#C59AF8;
   --main-yellow: #FFA732;/*buscar un color que haga contraste sobre main-orange*/
-  --main-white:#E8E9FF;/*#E8E8ff para letras claras en fondos oscuros*/;
+  --main-white:#E8E9FF;
 }
 @font-face {
   font-family: 'Rubik Broken Fax';
-  src: url('/RubikBrokenFax-Regular.ttf');
+  src: url('/RubikBrokenFax-Regular.ttf');/*sera necesario cambiar la fuente, por motivos esteticos*/
 }
+.btn1{
+ text-decoration: none;
+ color:var(--main-black);
 
+}
+.btn2{
+  color:var(--main-white);
+  font-family: 'Rubik Broken Fax';
+}
 body{
   width:100%;
   margin:0;
   font-weight: 400;
   line-height: 1.4;
-}
-#head{
+}/*se debe cambiar todo el espaciado mediante margins*/
+#head{/*seria bueno crear una transicion para esta navbar, que cambia segun el gradiente de sombreado sobre el que este*/
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +34,7 @@ body{
   left: 0;
   width: 100%;
   height: 8%;
-  background-color: var(--main-violet1);
+  background-color: var(--main-black);
   z-index:1000;
   font-family: 'Rubik Broken Fax';
   color:var(--main-white);
@@ -35,7 +42,8 @@ body{
 #header-img{
   height: 150%;
   margin-left: 3%;
-  /*aqui estaria bueno colocarle sombreado blanco*/
+  /*aqui estaria bueno colocarle sombreado blanco
+  con --main-white*/
 }
 .nav-list {
   list-style-type: none;
@@ -50,10 +58,7 @@ body{
   margin-right: 10px;
   
 }
-.btn{
-  text-decoration:none;
-  color:var(--main-white);
-}
+
 #welcome-section{
   display: flex;
   flex-direction: column;
@@ -62,7 +67,7 @@ body{
   width: 100%;
   height: 100vh;
   background-color: #000;
-  background-image: linear-gradient(62deg, var(--main-violet2) 0%, #181719 100%);
+  background-image:linear-gradient(to bottom, var(--main-black), var(--main-violet2));
 }
 #hi{
    margin-top: 50px;
@@ -80,8 +85,10 @@ body{
 }
 #some-projects-view{
    margin: 0px;
+   margin-bottom: 10%;
    padding-top:8%;
    font-family: 'Rubik Broken Fax';
+   color:var(--main-white);/*seria bueno hacerlo un tono un poco mas gris*/
 }
 
 #projects, #welcome-section, #lets-work-together {
@@ -92,13 +99,13 @@ body{
 color:var(--main-white);
 }
 #projects{
-  background-color:var(--main-blue);/*cambiar por un tono de morado*/
+  background-color:var(--main-violet2);/*cambiar por un tono de morado*/
   justify-content: center;
   text-align: center;
   width: 100%;
   height: 100vh;
   /*podria crear un gradiente linear para combinar colores entre sections*/
-  background-image: linear-gradient(62deg, var(--main-blue) 0%, #181719 100%);
+  background-image: linear-gradient(to bottom, var(--main-violet2), var(--main-blue));
 }
 .projects-grid{
   list-style-type: none;
@@ -115,6 +122,10 @@ background-color: var(--main-yellow);
 box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 border-radius: 2px;
 }
+.project-title{
+  color:var(--main-blue);
+  text-decoration: none;
+}
 .link-img{
   height: calc(100% - 6.8rem);
   width: 100%;
@@ -129,6 +140,7 @@ border-radius: 2px;
 }
 .project-tile:hover .corc {
   display: block;
+  color:var(--main-blue);
 }
 .btn-show-all {
   font-size: 2rem;
@@ -137,13 +149,16 @@ border-radius: 2px;
   justify-content:center;
   padding: 1rem 2rem;
   border-radius: 2px;
+  border: 1% var(--main-black);
   width:15%;
   height:7%;
   color:white;
   font-family: 'Rubik Broken Fax';
 }
 #lets-work-together{
-  background-color:var(--main-yellow);
+  background-color:var(--main-blue);
+  background-image: linear-gradient(to bottom, var(--main-blue), var(--main-lile));
+
 }
 #lwt h2, #lwt h3{
   display: flex;
