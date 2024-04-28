@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: 'Rubik Broken Fax';
-  src: url('/RubikBrokenFax-Regular.ttf');/*sera necesario cambiar la fuente, por motivos esteticos*/
+  src: url('/fonts/RubikBrokenFax-Regular.ttf');/*sera necesario cambiar la fuente, por motivos esteticos*/
 }
 .btn1{
  text-decoration: none;
@@ -24,6 +24,9 @@ body{
   margin:0;
   font-weight: 400;
   line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }/*se debe cambiar todo el espaciado mediante margins*/
 #head{/*seria bueno crear una transicion para esta navbar, que cambia segun el gradiente de sombreado sobre el que este*/
   display: flex;
@@ -39,6 +42,7 @@ body{
   font-family: 'Rubik Broken Fax';
   color:var(--main-white);
 }
+
 #header-img{
   height: 150%;
   margin-left: 3%;
@@ -158,7 +162,6 @@ border-radius: 2px;
 #lets-work-together{
   background-color:var(--main-blue);
   background-image: linear-gradient(to bottom, var(--main-blue), var(--main-lile));
-
 }
 #lwt h2, #lwt h3{
   display: flex;
@@ -188,3 +191,51 @@ border-radius: 2px;
       --main-yellow: #CC8400;
   }
 }
+
+@media only screen and (max-width: 1067px) {
+  body, section {
+      padding: 10px;
+      margin: 0;
+  }
+  #projects, #welcome-section, #lets-work-together {
+    min-height: auto; 
+    padding-top: 20px;  
+  }
+  #head {
+    position: relative;
+    height: auto; 
+  }
+
+  .nav-list, .nav-list2 {
+      display: block;  
+  }
+
+  .nav-list li, .nav-list2 li {
+      margin-right: 0; 
+  }
+}
+@media only screen and (max-width: 1067px) {
+  #projects {
+      min-height: auto;  /* Permite que la sección se ajuste al contenido */
+      padding: 20px 0;  /* Aumenta el padding vertical para más espacio */
+  }
+
+  .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Ajusta el tamaño de las columnas para mejor adaptabilidad */
+      grid-gap: 20px;  /* Añade espacio entre los tiles para evitar el solapamiento */
+  }
+
+  .project-tile {
+      margin: 10px;  /* Ajusta el margen para asegurar espacio adecuado alrededor de cada tile */
+      height: auto;  /* Altura automática para expandirse según el contenido de la imagen y título */
+  }
+}
+
+
+/*debo disminuir cuando disminuya el tamano de la pantalla:
+  -Logo
+  -Imagenes
+se debe debugguear
+  -Desliz de projects-grid debajo de #lets-work-together
+*/
