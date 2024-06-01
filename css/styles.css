@@ -10,6 +10,7 @@
   font-family: 'Rubik Broken Fax';
   src: url('/fonts/RubikBrokenFax-Regular.ttf');/*sera necesario cambiar la fuente, por motivos esteticos*/
 }
+/*arreglar primero los tamano y disposiciones para celular, y luego para tablet y pc*/
 .btn1{
  text-decoration: none;
  color:var(--main-black);
@@ -180,7 +181,7 @@ border-radius: 2px;
 
 .nav-list2 li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 10px;/*arreglar para celular*/
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -192,45 +193,43 @@ border-radius: 2px;
   }
 }
 
-@media only screen and (max-width: 1067px) {
-  body, section {
-      padding: 10px;
-      margin: 0;
-  }
-  #projects, #welcome-section, #lets-work-together {
-    min-height: auto; 
-    padding-top: 20px;  
-  }
-  #head {
-    position: relative;
-    height: auto; 
+/*de aqui empiezan los estilos para tablet y pc*/
+
+@media (max-width: 772px) {
+  div {
+    display: inline-block;
+    width: 45%;
+    margin: 5px;
+    padding: 2px;
+    vertical-align: top;
   }
 
-  .nav-list, .nav-list2 {
-      display: block;  
-  }
-
-  .nav-list li, .nav-list2 li {
-      margin-right: 0; 
+  div img {
+    width: 100%;
+    max-height: 30vh;
+    display: block;
+    margin: auto;
   }
 }
-@media only screen and (max-width: 1067px) {
-  #projects {
-      min-height: auto;  /* Permite que la sección se ajuste al contenido */
-      padding: 20px 0;  /* Aumenta el padding vertical para más espacio */
-  }
 
-  .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  /* Ajusta el tamaño de las columnas para mejor adaptabilidad */
-      grid-gap: 20px;  /* Añade espacio entre los tiles para evitar el solapamiento */
-  }
-
-  .project-tile {
-      margin: 10px;  /* Ajusta el margen para asegurar espacio adecuado alrededor de cada tile */
-      height: auto;  /* Altura automática para expandirse según el contenido de la imagen y título */
+@media (min-width: 773px) and (max-width: 998px) {
+  div {
+    display: inline-block;
+    width: 45%;
+    margin: 5px;
+    padding: 2px;
   }
 }
+
+@media (min-width: 999px) {
+  div {
+    display: inline-block;
+    width: 30%;
+    margin: 5px;
+    padding: 2px;
+  }
+}
+
 
 
 /*debo disminuir cuando disminuya el tamano de la pantalla:
