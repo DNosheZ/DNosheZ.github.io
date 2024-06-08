@@ -105,13 +105,12 @@ color:var(--main-white);
 }
 #projects{
   /*background-color:var(--main-violet2);/*cambiar por un tono de morado*/
-  background-color: #000;
   justify-content: center;
   text-align: center;
   width: 100%;
   height: 100vh;
   /*podria crear un gradiente linear para combinar colores entre sections*/
-  /*background-image: linear-gradient(to bottom, var(--main-violet2), var(--main-blue));*/
+  background-image: linear-gradient(to bottom, var(--main-violet2), var(--main-blue));
 }
 .projects-grid{
   list-style-type: none;
