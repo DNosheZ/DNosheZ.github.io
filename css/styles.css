@@ -104,24 +104,25 @@ body{
 color:var(--main-white);
 }
 #projects{
-  background-color:var(--main-violet2);/*cambiar por un tono de morado*/
+  /*background-color:var(--main-violet2);/*cambiar por un tono de morado*/
+  background-color: #000;
   justify-content: center;
   text-align: center;
   width: 100%;
   height: 100vh;
   /*podria crear un gradiente linear para combinar colores entre sections*/
-  background-image: linear-gradient(to bottom, var(--main-violet2), var(--main-blue));
+  /*background-image: linear-gradient(to bottom, var(--main-violet2), var(--main-blue));*/
 }
 .projects-grid{
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
+  display: -ms-inline-grid;
   grid-template-columns: 500px;
+  grid-column: auto;
   width:100%;
   /*necesito centrar el grid*/
   justify-content: center;
   align-items: center;
+   
 }
 .project-tile{
   background-color: var(--main-yellow);
@@ -169,10 +170,18 @@ color:var(--main-white);
   color:white;
   font-family: 'Rubik Broken Fax';
 }
+
+
 #lets-work-together{
   background-color:var(--main-blue);
   background-image: linear-gradient(to bottom, var(--main-blue), var(--main-lile));
   text-align: center;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  flex: 1;
 }
 #lwt h2, #lwt h3{
   display: flex;
