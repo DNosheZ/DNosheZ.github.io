@@ -18,7 +18,7 @@
 }
 .btn2{
   color:var(--main-white);
-  font-family: 'Rubik Broken Fax';
+  text-decoration: none;
 }
 body{
   width:100%;
@@ -38,7 +38,6 @@ body{
   background-color: #000;
 
   z-index:5;
-  font-family: 'Rubik Broken Fax';
   color:var(--main-white);
 }
 main{
@@ -82,21 +81,19 @@ footer{
    margin-top: 50px;
     display: flex;
     justify-content:center;
-    font-family: 'Rubik Broken Fax'
+    color:var(--main-white);
 }/*requiero mejores fuentes para titulos y subtitulos*/
 #reliable,#heres,#some-projects-view, #heres{
     display: flex;
     justify-content:center;
 }
 #heres{
-  
-  font-family: 'Rubik Broken Fax'
+  color:var(--main-white);
 }
 #some-projects-view{
    margin: 0px;
    margin-bottom: 10%;
    padding-top:8%;
-   font-family: 'Rubik Broken Fax';
    color:var(--main-black);/*seria bueno hacerlo un tono un poco mas gris*/
 
 }
@@ -163,8 +160,7 @@ color:var(--main-white);
   border: 1% var(--main-black);
   width:15%;
   height:7%;
-  color:white;
-  font-family: 'Rubik Broken Fax';
+  color:var(--main-black);
 }
 #lets-work-together{
   text-align: center;
