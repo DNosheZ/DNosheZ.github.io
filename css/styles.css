@@ -44,6 +44,7 @@ body{
 main{
   background-image:linear-gradient(to bottom, var(--main-black), var(--main-violet2), var(--main-blue), var(--main-lile));
   z-index:4;
+  place-items: center;
 }
 footer{
   z-index: 1;
@@ -107,19 +108,18 @@ footer{
 color:var(--main-white);
 }
 #projects{
-  /*background-color:var(--main-violet2);/*cambiar por un tono de morado*/
   align-items: center;
-  width: 90%;
   height: 100%;
-  /*podria crear un gradiente linear para combinar colores entre sections*/
   z-index: 2;
-  display: grid;
+  display: grid; 
+  place-items: center;
 }
 .projects-grid{
   list-style-type: none;
   display:grid;
   grid-column: auto;
   width:100%;
+  place-items: center;
   /*necesito centrar el grid*/
 }
 .project-tile{
