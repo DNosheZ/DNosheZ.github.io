@@ -25,9 +25,6 @@ body{
   margin:0;
   font-weight: 400;
   line-height: 1.4;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
 }/*se debe cambiar todo el espaciado mediante margins*/
 #head{/*seria bueno crear una transicion para esta navbar, que cambia segun el gradiente de sombreado sobre el que este*/
   display: flex;
@@ -38,12 +35,19 @@ body{
   left: 0;
   width: 100%;
   height: 8%;
-  background-color: var(--main-black);
-  z-index:1000;
+  background-color: #000;
+
+  z-index:5;
   font-family: 'Rubik Broken Fax';
   color:var(--main-white);
 }
-
+main{
+  background-image:linear-gradient(to bottom, var(--main-black), var(--main-violet2), var(--main-blue), var(--main-lile));
+  z-index:4;
+}
+footer{
+  z-index: 1;
+}
 #header-img{
   height: 150%;
   margin-left: 3%;
@@ -71,8 +75,7 @@ body{
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #000;
-  background-image:linear-gradient(to bottom, var(--main-black), var(--main-violet2));
+
 }
 #hi{
    margin-top: 50px;
@@ -93,11 +96,11 @@ body{
    margin-bottom: 10%;
    padding-top:8%;
    font-family: 'Rubik Broken Fax';
-   color:var(--main-white);/*seria bueno hacerlo un tono un poco mas gris*/
+   color:var(--main-black);/*seria bueno hacerlo un tono un poco mas gris*/
+
 }
 
 #projects, #welcome-section, #lets-work-together {
-  width: 100%;
   padding-top: 5%;
 }
 #reliable,#coffee{
@@ -105,30 +108,26 @@ color:var(--main-white);
 }
 #projects{
   /*background-color:var(--main-violet2);/*cambiar por un tono de morado*/
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 100vh;
+  align-items: center;
+  width: 90%;
+  height: 100%;
   /*podria crear un gradiente linear para combinar colores entre sections*/
-  background-image: linear-gradient(to bottom, var(--main-violet2), var(--main-blue));
+  z-index: 2;
+  display: grid;
 }
 .projects-grid{
   list-style-type: none;
-  display: -ms-inline-grid;
-  grid-template-columns: 500px;
+  display:grid;
   grid-column: auto;
   width:100%;
   /*necesito centrar el grid*/
-  justify-content: center;
-  align-items: center;
-   
 }
 .project-tile{
   background-color: var(--main-yellow);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
   display: inline-block;
-  width: 24%;
+  width: 60%;
   margin: 5px;
   padding: 2px;
   text-align:center;
@@ -138,12 +137,10 @@ color:var(--main-white);
   text-decoration: none;
 }
 .link-img{
-  height: calc(100% - 6.8rem);
   object-fit: cover;
-  width:150px;
-  height: 150px;
+  width:90%;
   display:block;
-  margin:auto;
+  margin:auto ;
 }
 .corc{
   display:none;
@@ -169,18 +166,14 @@ color:var(--main-white);
   color:white;
   font-family: 'Rubik Broken Fax';
 }
-
-
 #lets-work-together{
-  background-color:var(--main-blue);
-  background-image: linear-gradient(to bottom, var(--main-blue), var(--main-lile));
   text-align: center;
-
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0 auto;
   flex: 1;
+  z-index: 3;
 }
 #lwt h2, #lwt h3{
   display: flex;
@@ -220,44 +213,39 @@ color:var(--main-white);
 
 /*de aqui empiezan los estilos para tablet y pc*/
 
-@media (max-width: 772px) {
+@media (min-width: 772px) {
   .project-tile {
     display: inline-block;
-    width: 45%;
+    width: 77%;
     margin: 5px;
     padding: 2px;
     vertical-align: top;
+    align-items: center;
   }
-
+  .projects-grid{
+    grid-template-columns: 50% 50%;
+  }
   .link-img {
-    width: 100%;
+    width: 90%;
     max-height: 30vh;
     display: block;
     margin: auto;
   }
 }
 
-@media (min-width: 773px) and (max-width: 998px) {
+@media (min-width: 998px) {
   .project-tile {
     display: inline-block;
-    width: 45%;
+    width: 80%;
     margin: 5px;
     padding: 2px;
   }
   .projects-grid{
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 30% 30%;
+    align-items: center;
   }
-}
-
-@media (min-width: 999px) {
-  .project-tile {
-    display: inline-block;
-    width: 30%;
-    margin: 5px;
-    padding: 2px;
-  }
-  .projects-grid{
-    grid-template-columns: 25% 25% 25%;
+  .link-img{
+    width:90%
   }
 }
 
