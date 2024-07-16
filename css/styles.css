@@ -197,6 +197,11 @@ color:var(--main-white);
   margin: 1%;
   text-align: center;
 }
+.contact-img{
+  height: 4vh;
+  padding: 6px;
+  margin:5%;
+}
 @media (prefers-color-scheme: dark) {
   :root {
       --main-violet: #562D88;
