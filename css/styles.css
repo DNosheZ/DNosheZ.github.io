@@ -3,8 +3,16 @@
   --main-violet2: #C21292;
   --main-blue: #6A4CB5;
   --main-lile:#C59AF8;
-  --main-yellow: #FFA732;/*buscar un color que haga contraste sobre main-orange*/
+  --main-yellow: #7b55cb;/*buscar un color que haga contraste sobre main-orange*/
   --main-white:#E8E9FF;
+
+  /*en RGBA*/
+  --main-black-rgb: 16, 7, 16;
+  --main-violet2-rgba: 194, 18, 146;
+  --main-blue-rgba: 106, 76, 181;
+  --main-lile-rgba: 197, 154, 248, 0.75;
+  --main-blile-rgba: 123, 85, 203;
+  --main-white-rgba: 32, 233, 255;
 }
 @font-face {
   font-family: 'Rubik Broken Fax';
@@ -94,7 +102,7 @@ footer{
    margin: 0px;
    margin-bottom: 10%;
    padding-top:8%;
-   color:var(--main-black);/*seria bueno hacerlo un tono un poco mas gris*/
+   color:var(--main-white);/*seria bueno hacerlo un tono un poco mas gris*/
 
 }
 
@@ -105,9 +113,8 @@ footer{
 color:var(--main-white);
 }
 #projects{
-  align-items: center;
+  
   height: 100%;
-  z-index: 2;
   display: grid; 
   place-items: center;
 }
@@ -120,7 +127,7 @@ color:var(--main-white);
   /*necesito centrar el grid*/
 }
 .project-tile{
-  background-color: var(--main-yellow);
+  background-color: rgba(var(--main-blile-rgba),0.5);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
   display: inline-block;
@@ -130,7 +137,7 @@ color:var(--main-white);
   text-align:center;
 }
 .project-title{
-  color:var(--main-blue);
+  color:var(--main-white);
   text-decoration: none;
 }
 .link-img{
@@ -148,7 +155,7 @@ color:var(--main-white);
 }
 .project-tile:hover .corc {
   display: block;
-  color:var(--main-blue);
+  background-color: rgba(var(--main-blue-rgba),0.5);;
 }
 .btn-show-all {
   font-size: 2rem;
@@ -160,7 +167,7 @@ color:var(--main-white);
   border: 1% var(--main-black);
   width:15%;
   height:7%;
-  color:var(--main-black);
+  color:var(--main-white);
 }
 #lets-work-together{
   text-align: center;
@@ -175,9 +182,6 @@ color:var(--main-white);
   display: flex;
   justify-content:center;
 }
-#lwt h2{
-  font-family: 'Rubik Broken Fax';
-}
 .nav-list2 {
   list-style-type: none;
   margin: 0;
@@ -188,6 +192,7 @@ color:var(--main-white);
 #navbar{
   display: flex;
   justify-content: center;
+
 }
 .nav-list2 ul{
   display: flex; /* Aplica un layout flexible */
@@ -241,9 +246,13 @@ color:var(--main-white);
     margin: 5px;
     padding: 2px;
   }
+  #projects{
+    place-items: center;
+  }
   .projects-grid{
     grid-template-columns: 30% 30% 30%;
     align-items: center;
+    place-items: center;
   }
   .link-img{
     width:90%
